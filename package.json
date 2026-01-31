@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/blas-ext-base-ndarray-ssumkbn",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Compute the sum of all elements in a one-dimensional single-precision floating-point ndarray using an improved Kahan-Babuška algorithm.",
   "license": "Apache-2.0",
   "author": {
@@ -37,7 +37,7 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/blas-ext-base-ssumkbn": "^0.2.2",
+    "@stdlib/blas-ext-base-ssumkbn": "^0.3.0",
     "@stdlib/ndarray-base-data-buffer": "^0.2.2",
     "@stdlib/ndarray-base-numel-dimension": "^0.3.2",
     "@stdlib/ndarray-base-offset": "^0.2.2",
@@ -92,7 +92,6 @@
     "single",
     "float32array"
   ],
-  "__stdlib__": {},
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/stdlib"
