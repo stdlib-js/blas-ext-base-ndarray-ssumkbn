@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,18 +16,11 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var numelDimension = require( '@stdlib/ndarray-base-numel-dimension' );
-var getStride = require( '@stdlib/ndarray-base-stride' );
-var getOffset = require( '@stdlib/ndarray-base-offset' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var strided = require( '@stdlib/blas-ext-base-ssumkbn' ).ndarray;
-
-
-// MAIN //
+import { float32ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Computes the sum of all elements in a one-dimensional single-precision floating-point ndarray using an improved Kahan–Babuška algorithm.
@@ -38,8 +31,8 @@ var strided = require( '@stdlib/blas-ext-base-ssumkbn' ).ndarray;
 *
 *     -   a one-dimensional input ndarray.
 *
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing ndarrays
-* @returns {number} sum
+* @param arrays - array-like object containing ndarrays
+* @returns sum
 *
 * @example
 * var Float32Vector = require( '@stdlib/ndarray-vector-float32' );
@@ -49,12 +42,9 @@ var strided = require( '@stdlib/blas-ext-base-ssumkbn' ).ndarray;
 * var v = ssumkbn( [ x ] );
 * // returns 10.0
 */
-function ssumkbn( arrays ) {
-	var x = arrays[ 0 ];
-	return strided( numelDimension( x, 0 ), getData( x ), getStride( x, 0 ), getOffset( x ) ); // eslint-disable-line max-len
-}
+declare function ssumkbn( arrays: [ float32ndarray ] ): number;
 
 
 // EXPORTS //
 
-module.exports = ssumkbn;
+export = ssumkbn;
